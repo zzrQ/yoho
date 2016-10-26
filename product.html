@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情-卫衣</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/product.css"/>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            (function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+            }());
+
+        })(document, window);
+    </script>
+</head>
+<body>
+    <div class="layout">
+        <div class="yoho-page">
+            <header>
+                <div class="home-header boys-header clearfix">
+                    <span class="fa fa-angle-left" onclick="goBack()"></span>
+                    <span class="search" ng-click="">商品详情</span>
+                    <a href="#">
+                        <span class="fa fa-tasks"></span>
+                    </a>
+
+                </div>
+            </header>
+            <main id="main">
+                <div class="img">
+                    <img src="img/goods/shirt1.jpg" alt=""/>
+                </div>
+                <div class="info">
+                    <p>趣味图案印花卫衣</p>
+                </div>
+                <div class="price">
+                    <span class = "now"><i class="fa fa-cny"></i>208</span>&nbsp;&nbsp;
+                    <del class = "before"><i class="fa fa-cny"></i>2080</del>
+                </div>
+            </main>
+            <section id="detail">
+                <h3>商品详情……</h3>
+
+            </section>
+            <section id="addShoppingCart">
+                <a class="fa fa-cart-plus" href="cart.html"></a>
+                <a href="javascript:;" class="add-cart">加入购物车</a>
+                <i class="fa fa-heart"></i>
+                <span>0</span>
+            </section>
+            <section id="select">
+                <div class="main">
+                    <div class="infos">
+                        <div class="basic-info clearfix">
+                            <div class="img">
+                                <img src="img/goods/shirt1.jpg" alt=""/>
+                            </div>
+                            <div class="text-info">
+                                <p class="name">趣味图案印花卫衣</p>
+                            </div>
+                            <div class="price">
+                                <span class = "now"><i class="fa fa-cny"></i>208</span>&nbsp;&nbsp;
+                                <del class = "before"><i class="fa fa-cny"></i>2080</del>
+                            </div>
+                        </div>
+                        <div class="chose-items">
+                            <div class="color-list  clearfix">
+                                <span>颜色：</span>
+                                <li>黑色</li>
+                            </div>
+                            <div class="size-list clearfix" >
+                                <span>尺码：</span>
+                                <li>S</li>
+                                <li>M</li>
+                            </div>
+                            <div class="num" >
+                                <span>数量：</span>
+                                <div class="clearfix">
+                                    <button> - </button>
+                                    <input type="text" value="1"/>
+                                    <button> + </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button>加入购物车</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+</div>
+    <script src="js/product.js"></script>
+    <script>
+        function goBack(){
+            history.back();
+        }
+    </script>
+</body>
+</html>

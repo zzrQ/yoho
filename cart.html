@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/cart.css"/>
+    <script src="js/less.js"></script>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            (function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+            }());
+        })(document, window);
+    </script>
+</head>
+<body>
+<div class="layout">
+    <header>
+        <div class="home-header boys-header clearfix">
+            <span class="fa fa-angle-left" onclick="goBack()"></span>
+            <span class="search">购物车</span>
+        </div>
+    </header>
+    <section class="goods-list">
+        <div class="product">
+            <div class="product-checkbox">
+                <input type="checkbox"/>
+            </div>
+            <div class="product-content">
+                <div class="product-img">
+                    <img src="img/goods/shirt1.jpg" alt="">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">
+                        <a href="#">趣味图案印花卫衣</a>
+                    </div>
+                    <p class="product-price"><i class="fa fa-cny"></i><span>208.00</span></p>
+
+                    <div class="product-option clearfix">
+                        <div class="pull-left">
+                            <span class="substract">-</span>
+                            <input type="tel" value="1">
+                            <span class="add">+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="delete-box">
+                <span class="up"></span>
+                <span class="down"></span>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-checkbox">
+                <input type="checkbox"/>
+            </div>
+            <div class="product-content">
+                <div class="product-img">
+                    <img src="img/goods/shoes1.jpg" alt="">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">
+                        <a href="#">意大利原产羊皮休闲鞋</a>
+                    </div>
+                    <p class="product-price"><i class="fa fa-cny"></i><span>600.00</span></p>
+
+                    <div class="product-option clearfix">
+                        <div class="pull-left">
+                            <span class="substract">-</span>
+                            <input type="tel" value="1">
+                            <span class="add">+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="delete-box">
+                <span class="up"></span>
+                <span class="down"></span>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-checkbox">
+                <input type="checkbox"/>
+            </div>
+            <div class="product-content">
+                <div class="product-img">
+                    <img src="img/goods/shirt2.jpg" alt="">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">
+                        <a href="#">简洁白色卫衣百搭</a>
+                    </div>
+                    <p class="product-price"><i class="fa fa-cny"></i><span>299.00</span></p>
+
+                    <div class="product-option clearfix">
+                        <div class="pull-left">
+                            <span class="substract">-</span>
+                            <input type="tel" value="1">
+                            <span class="add">+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="delete-box">
+                <span class="up"></span>
+                <span class="down"></span>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-checkbox">
+                <input type="checkbox"/>
+            </div>
+            <div class="product-content">
+                <div class="product-img">
+                    <img src="img/goods/shoes2.jpg" alt="">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">
+                        <a href="#">棕色高帮系带</a>
+                    </div>
+                    <p class="product-price"><i class="fa fa-cny"></i><span>460.00</span></p>
+
+                    <div class="product-option clearfix">
+                        <div class="pull-left">
+                            <span class="substract">-</span>
+                            <input type="tel" value="1">
+                            <span class="add">+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="delete-box">
+                <span class="up"></span>
+                <span class="down"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="balance" class="clearfix">
+        <div class="total-checkbox">
+            <input type="checkbox" class="check-all"/>
+        </div>
+        <button>结算</button>
+        <div class="total">
+            <p>总计：
+                <i class="fa fa-cny"></i>
+                <span id="priceTotal">0.00</span>
+                (<span id="selectedTotal">0</span>件)
+            </p>
+            <p>(不含运费)</p>
+        </div>
+    </section>
+    <!-- 弹出框 -->
+    <section id="model">
+        <div class="model-info">
+            <div class="model-info-name">
+                <h4>您确定要删除商品吗 确定</h4>
+            </div>
+            <div class="mode-info-option clearfix">
+                <a href="#" class="btn-cancel">取消</a>
+                <a href="#" class="btn-confirm">确定</a>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="js/cart.js"></script>
+<script>
+    function goBack(){
+        history.back();
+    }
+</script>
+</body>
+</html>

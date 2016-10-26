@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <title>首页</title>
+</head>
+<body>
+<div id="layout">
+    <header id="header" class="clearfix">
+        <div class="index-logo"></div>
+        <div class="search-box">
+            <input type="text" placeholder="搜索"/>
+            <span class="icon-search"></span>
+        </div>
+    </header>
+    <main>
+        <div class="index-channel">
+            <img src="img/0179d2d39fd78c7f19f01ec4377400ec01.jpg-imageView2-2-w-640-h-800-q-70.jpg" alt=""/>
+        </div>
+        <div class="index-channel-list">
+            <a href="boys.html">男生
+                <span class="light">BOYS</span>
+                <span class="icon-right"></span>
+            </a>
+            <a href="javascript:;">女生
+                <span class="light">GIRLS</span>
+                <span class="icon-right"></span>
+            </a>
+            <a href="javascript:;">潮童
+                <span class="light">KIDS</span>
+                <span class="icon-right"></span>
+            </a>
+            <a href="javascript:;">创意生活
+                <span class="light">LIFESTYLE</span>
+                <span class="icon-right"></span>
+            </a>
+
+        </div>
+    </main>
+    <footer>
+        <p class="back-to-top">
+            <a href="#">
+                <span>Back to top</span>
+                <i class="icon-top"></i>
+
+            </a>
+
+        </p>
+        <address class="copyright">
+            CopyRight©2007-2016 南京新与力文化传播有限公司
+        </address>
+    </footer>
+
+
+</div>
+</body>
+<script>
+    var html = document.querySelector("html");
+    window.onload = window.onresize = function () {
+
+        var wid = client().width;
+
+        if (wid >= 640) {
+
+            html.style.fontSize = 40 + "px";
+        } else if (wid <= 64) {
+
+            html.style.fontSize = 4 + "px";
+        } else {
+
+            html.style.fontSize = wid / 16 + "px";
+        }
+    }
+
+    function client() {
+        //在一个浏览器中，如果window.innerWidth的值不等于undefined，那么说明这个属性存在
+        if (window.innerWidth !== undefined) {
+            //火狐谷歌IE9+
+            return {'width': window.innerWidth}
+        } else if (document.compatMode === 'CSS1Compat') {
+            return {'width': document.documentElement.clientWidth}
+        } else {
+            return {'width': document.body.clientWidth}
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索 | Yoho!Buy有货 | 潮流购物逛不停</title>
+    <meta name="keywords"
+          content="Yoho! 有货官网,潮流志,潮流男装,潮牌,美国潮牌,日本潮牌,香港潮牌,潮牌店,新品首发,欧美潮流,全球购,代购,时尚,流行,特卖,B2C,正品,购物网站,网上购物,货到付款">
+    <meta name="description"
+          content="YOHO! 有货，年轻人潮流购物中心，中国最大的潮流商品购物网站。100%品牌正品保证，支持货到付款。作为YOHO!旗下的购物平台，汇集了全球潮流时尚商品和中国最流行的商品，也是国内最大的原创文化商品平台，也是香港，台湾地区流行商品的集中地。同时包含日本、韩国等众多国外潮流品牌，带给您全新潮流购物体验。">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/public.css"/>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            (function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+            }());
+        })(document, window);
+    </script>
+</head>
+<body ng-app="CartApp" ng-controller="MainCtrl">
+<div class="layout">
+    <div class="yoho-page">
+        <header>
+            <div class="home-header boys-header clearfix">
+                <span class="fa fa-angle-left" onclick="goBack()"></span>
+                <span class="search">搜索</span>
+                <a href="#">
+                    <span class="fa fa-tasks"></span>
+                </a>
+
+            </div>
+        </header>
+        <section id="seachInput">
+            <form action="https://search.m.yohobuy.com/" method="get">
+                <i class="fa fa-search"></i>
+                <input type="text" class="buriedpoint" ng-model="search.description"/>
+                <span>搜索</span>
+            </form>
+        </section>
+        <section id="goodListPage">
+            <ul class="nav-list">
+                <li class="default" ng-click = "current ='default'"  ng-class = "{active:current ==='default'}"><a href="javascript:;"><span class="nav-txt">默认</span>&nbsp;<span
+                        class="fa fa-angle-down cur"></span></a></li>
+                <li class="price" ng-click = "sortPrice()" ng-class="{active:current ==='price'}"><a href="javascript:;"><span
+                        class="nav-txt">价格</span><span class="icon"><i class="fa fa-angle-up"
+                        ng-class="{click:count%2==0 && count !=0}"></i>
+                    <i class="fa fa-angle-down" ng-class="{click:count%2!=0}"></i></span></a></li>
+                <li class="discount"  ng-click = "sortDiscount()" ng-class="{active:current ==='discount'}"><a href="javascript:;" ng-click=""><span class="nav-txt">折扣</span><span
+                        class="icon"><i class="fa fa-angle-up" ng-class="{click:count1%2 == 0 && count1 != 0}"></i><i class="fa fa-angle-down"  ng-class="{click:count1%2 != 0}"></i></span></a></li>
+                <li class="filter" ng-click = "current ='filter'" ng-class="{active:current ==='filter'}"><a href="javascript:;"><span class="nav-txt">筛选</span>&nbsp;<span
+                        class="icon"><i class="fa fa-sort-down"></i></span></a></li>
+            </ul>
+        </section>
+        <section id="goodsContainer" class="clearfix">
+            <div class="new-goods" ng-repeat="good in goods | filter:search  track by $index">
+                <a href="product.html">
+                    <div class="new"><img ng-src="{{good.imgSrc}}"/></div>
+                    <div class="description"><p>{{good.description}}</p></div>
+                    <div class="price"><span ng-class="{now:good.before}"><i class="fa fa-cny"></i>{{good.now}}</span>&nbsp;&nbsp;
+                        <span class="del" ng-class="{hide:!good.before}"><i class="fa fa-cny"></i>{{good.before}}</span>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+    </div>
+    <div id="cart">
+        <a href="#">
+            <i class="fa fa-shopping-cart"></i>
+        </a>
+    </div>
+</div>
+<!--练习用angular做页面-->
+<script src="js/angular.js"></script>
+<script src="js/search-app.js"></script>
+<script>
+    function goBack(){
+        history.back();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+@import "base.css";
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-size: 0.6rem;
+  font-family: helvetica, Arial, "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+  line-height: 1.4rem;
+}
+
+#header{
+  padding: 0 0.5rem;
+  height: 2.4rem;
+
+  >.index-logo{
+    float: left;
+    padding: 0.5rem 0;
+    width:7.2rem;
+    height: 2.4rem;
+    background: url(../img/yohologo.png-v15703d43f40.png) no-repeat;
+    background-size:7rem 1.5rem;
+    background-origin: content-box;
+    background-clip: content-box;
+  }
+  >.search-box{
+    margin: 0.5rem 0;
+    height: 1.4rem;
+    position: relative;
+    border: 1px solid #ccc;
+    overflow:hidden;
+    >input{
+      padding-left:0.25rem;
+      width: 96%;
+      color: #999;
+      font-size: .7rem;
+    }
+    >.icon-search{
+      position: absolute;
+      color: #e6e6e6;
+      top: 0.3rem;
+      right: 0.25rem;
+      font-size:0.7rem;
+    }
+
+  }
+}
+main{
+  position: relative;
+  >.index-channel{
+    >img{
+      width: 100%;
+    }
+  }
+  >.index-channel-list{
+    position: absolute;
+    top:50%;
+    margin-top: -7.5rem;
+    width: 100%;
+    >a{
+      display: block;
+      margin: 0 auto 1rem;
+      width: 10.8rem;
+      height: 2.5rem;
+      border: 0.2rem solid #fff;
+      text-align:center;
+      background-color: #000;
+      color:#fff;
+      font-weight:700;
+      font-size:0.8rem;
+      line-height: 2.1rem;
+      position: relative;
+      font-family: helvetica;
+      &:active{
+        color:#000;
+        background-color: #fff;
+        border: 0.2rem solid #000;
+      }
+
+      >.light{
+        font-weight:lighter;
+
+      }
+      >.icon-right{
+        position: absolute;
+        top: 0.15rem;
+        right: -0.25rem;
+        color:#fff;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+footer{
+  .back-to-top{
+    padding: 0 0.75rem;
+    height: 3rem;
+    line-height: 3rem;
+    >a{
+      float: right;
+      position: relative;
+      font-size: 0.6rem;
+      >span{
+        padding-right: 0.6rem;
+      }
+      >.icon-top{
+        position: absolute;
+        top: 1.25rem;
+        right: -0.05rem;
+      }
+    }
+  }
+  .copyright{
+    border-top: 1px solid #ccc;
+    background-color: #eee;
+    height: 3rem;
+    line-height:3rem;
+    text-align:center;
+    font-size: 0.6rem;
+  }
+}
