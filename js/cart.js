@@ -53,6 +53,7 @@ window.onload = function () {
     var deleteAll = document.querySelector(".delete-all");
     var arr;
     deleteProduct();
+    getTotal();
 // 更新总数和总价格
     function getTotal() {
         var seleted = 0;
