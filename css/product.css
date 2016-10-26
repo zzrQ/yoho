@@ -600,6 +600,7 @@ footer .copyright {
   border: 1px solid #000;
   text-align: center;
   line-height: 2rem;
+  list-style: none;
 }
 #select > .main > .infos > .chose-items .num {
   font-size: .6rem;
